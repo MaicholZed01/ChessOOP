@@ -1,19 +1,24 @@
 package org.example;
 
+
+import univaq.lpo.chess.model.*;
+
+import java.util.Scanner;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
-    public static void main(String[] args) {
-        // Press Alt+Invio with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+    public static void main(String[] args) throws InterruptedException {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Inserisci Nome Del Giocatore 1");
+        IPlayer playerOne = new Player(scanner.nextLine(), true);
 
-        // Press Maiusc+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        System.out.println("Inserisci Nome Del Giocatore 2");
+        IPlayer playerTwo = new Player(scanner.nextLine(), false);
+        IBoardGame game = ChessGame.create(playerOne , playerTwo);
+        game.start();
+        IPlayer winner = game.RetrieveWinner();
 
-            // Press Maiusc+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        System.out.println("And the winner is: " + winner.getName());
     }
 }
