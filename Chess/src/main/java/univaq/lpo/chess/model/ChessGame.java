@@ -1,6 +1,8 @@
 package univaq.lpo.chess.model;
 
-public class ChessGame implements IBoardGame{
+import java.io.Serializable;
+
+public class ChessGame implements IBoardGame, Serializable {
     private IPlayer playerOne;
     private IPlayer playerTwo;
     private Board chessBoard;

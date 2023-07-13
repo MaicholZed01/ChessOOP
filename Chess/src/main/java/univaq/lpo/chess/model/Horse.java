@@ -37,5 +37,4 @@ public class Horse implements IPiece{
         return (this.isWhite ? "hw" : "hb") + "__" + index;
 
     }
-
 }
