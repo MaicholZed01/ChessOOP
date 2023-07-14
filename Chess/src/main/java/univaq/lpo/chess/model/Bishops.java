@@ -31,6 +31,16 @@ public class Bishops implements IPiece{
     }
 
     @Override
+    public boolean canMove(int endX, int endY, Board board) {
+        return false;
+    }
+
+    @Override
+    public boolean getIsWhite() {
+        return false;
+    }
+
+    @Override
     public int getX() {
         return x;
     }

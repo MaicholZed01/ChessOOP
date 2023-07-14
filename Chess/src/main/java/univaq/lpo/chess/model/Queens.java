@@ -14,12 +14,22 @@ public class Queens implements IPiece{
         this.index = index;
     }
 
+    @Override
+    public boolean getIsWhite() {
+        return false;
+    }
+
     public int getX() {
         return x;
     }
 
     public int getY() {
         return y;
+    }
+
+    @Override
+    public boolean canMove(int endX, int endY, Board board) {
+        return false;
     }
 
     public String print() {

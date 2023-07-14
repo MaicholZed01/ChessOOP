@@ -27,7 +27,12 @@ public class Towers implements IPiece {
         }
 
 
-        @Override
+    @Override
+    public boolean getIsWhite() {
+        return isWhite;
+    }
+
+    @Override
         public int getX () {
             return x;
         }
@@ -37,7 +42,12 @@ public class Towers implements IPiece {
             return y;
         }
 
-        @Override
+    @Override
+    public boolean canMove(int endX, int endY, Board board) {
+        return false;
+    }
+
+    @Override
         public String print () {
             return (this.isWhite ? "tw" : "tb") + "__" + index;
 

@@ -68,5 +68,8 @@ public class Board{
         }
         System.out.println("-----------------------------------------------------------------");
     }
+    public IPiece getPieceAt(int x , int y){
+        return this.pieces[x][y];
+    }
 
 }

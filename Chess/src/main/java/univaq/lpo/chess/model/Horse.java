@@ -23,6 +23,11 @@ public class Horse implements IPiece{
     }
 
     @Override
+    public boolean getIsWhite() {
+        return false;
+    }
+
+    @Override
     public int getX() {
         return x;
     }
@@ -30,6 +35,11 @@ public class Horse implements IPiece{
     @Override
     public int getY() {
         return y;
+    }
+
+    @Override
+    public boolean canMove(int endX, int endY, Board board) {
+        return false;
     }
 
     @Override
